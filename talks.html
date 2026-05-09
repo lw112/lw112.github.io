@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talks — Laura Weihl</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a class="brand" href="index.html">Laura Weihl</a>
+    <a href="index.html">About</a>
+    <a href="publications.html">Publications</a>
+    <a href="talks.html" class="active">Talks</a>
+    <a href="posters.html">Posters</a>
+    <a href="news.html">News</a>
+  </nav>
+
+  <div class="page">
+
+    <aside class="sidebar" data-include="sidebar.html"></aside>
+
+    <main class="main">
+      <h1>Talks</h1>
+
+      <ul class="talk-list">
+
+        <li class="talk-item">
+          <span class="talk-date">May 2025</span>
+          <div>
+            <p class="talk-title">Title of Your Invited Talk</p>
+            <p class="talk-venue">Workshop Name @ ICML 2025 — Vancouver, Canada</p>
+            <div class="talk-links">
+              <a href="#">Slides</a>
+              <a href="#">Video</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="talk-item">
+          <span class="talk-date">Mar 2025</span>
+          <div>
+            <p class="talk-title">Guest Lecture: Topic You Spoke About</p>
+            <p class="talk-venue">University of Copenhagen — Copenhagen, Denmark</p>
+            <div class="talk-links">
+              <a href="#">Slides</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="talk-item">
+          <span class="talk-date">Nov 2024</span>
+          <div>
+            <p class="talk-title">Talk at Industry Partner or Conference</p>
+            <p class="talk-venue">Company / Conference Name — City, Country</p>
+          </div>
+        </li>
+
+        <li class="talk-item">
+          <span class="talk-date">Sep 2024</span>
+          <div>
+            <p class="talk-title">Another Invited Talk on Your Research</p>
+            <p class="talk-venue">Research Institute — City, Country</p>
+            <div class="talk-links">
+              <a href="#">Slides</a>
+              <a href="#">Video</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="talk-item">
+          <span class="talk-date">Jun 2023</span>
+          <div>
+            <p class="talk-title">Contributed Talk: Paper Presentation</p>
+            <p class="talk-venue">Major Conference (CONF) — City, Country</p>
+            <div class="talk-links">
+              <a href="#">Slides</a>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </main>
+  </div>
+
+  <footer>© 2026 Laura Weihl · IT University of Copenhagen · Last updated May 2026</footer>
+
+  <script>
+    document.querySelectorAll('[data-include]').forEach(el => {
+      fetch(el.dataset.include)
+        .then(r => r.text())
+        .then(html => el.innerHTML = html);
+    });
+  </script>
+
+</body>
+</html>

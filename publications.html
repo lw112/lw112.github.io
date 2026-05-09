@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications — Laura Weihl</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a class="brand" href="index.html">Laura Weihl</a>
+    <a href="index.html">About</a>
+    <a href="publications.html" class="active">Publications</a>
+    <a href="talks.html">Talks</a>
+    <a href="posters.html">Posters</a>
+    <a href="news.html">News</a>
+  </nav>
+
+  <div class="page">
+
+    <aside class="sidebar" data-include="sidebar.html"></aside>
+
+    <main class="main">
+      <h1>Publications</h1>
+
+      <!-- 2025 -->
+      <div class="pub-year-group">
+        <p class="pub-year">2025</p>
+        <ul class="pub-list">
+
+          <li class="pub-item">
+            <p class="pub-title">Your Paper Title Goes Here: A Study of Something Interesting</p>
+            <p class="pub-authors"><strong>Your Name</strong>, Co-author One, Co-author Two</p>
+            <p class="pub-venue">Conference on Something Important (CONF), 2025</p>
+            <div class="pub-links">
+              <a href="#">Paper</a>
+              <a href="#">Code</a>
+              <a href="#">arXiv</a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <p class="pub-title">Another Paper With a Descriptive Title</p>
+            <p class="pub-authors"><strong>Your Name</strong>, Co-author Three, Co-author Four</p>
+            <p class="pub-venue">Workshop on Relevant Things @ ICLR, 2025</p>
+            <div class="pub-links">
+              <a href="#">Paper</a>
+              <a href="#">arXiv</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- 2024 -->
+      <div class="pub-year-group">
+        <p class="pub-year">2024</p>
+        <ul class="pub-list">
+
+          <li class="pub-item">
+            <p class="pub-title">Another Paper About a Different Topic with a Longer Title</p>
+            <p class="pub-authors"><strong>Your Name</strong>, Co-author Three</p>
+            <p class="pub-venue">Journal of Important Research, 2024</p>
+            <div class="pub-links">
+              <a href="#">Paper</a>
+              <a href="#">arXiv</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- 2023 -->
+      <div class="pub-year-group">
+        <p class="pub-year">2023</p>
+        <ul class="pub-list">
+
+          <li class="pub-item">
+            <p class="pub-title">Early Work: A Workshop Paper on a Foundational Topic</p>
+            <p class="pub-authors">Co-author One, <strong>Your Name</strong>, Co-author Four</p>
+            <p class="pub-venue">Workshop on Relevant Things @ NeurIPS, 2023</p>
+            <div class="pub-links">
+              <a href="#">Paper</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+    </main>
+  </div>
+
+  <footer>© 2026 Laura Weihl · IT University of Copenhagen · Last updated May 2026</footer>
+
+  <script>
+    document.querySelectorAll('[data-include]').forEach(el => {
+      fetch(el.dataset.include)
+        .then(r => r.text())
+        .then(html => el.innerHTML = html);
+    });
+  </script>
+
+</body>
+</html>
