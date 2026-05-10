@@ -7,15 +7,12 @@ Personal academic website for Laura Weihl, built with plain HTML and CSS - no fr
 ```
 lw112.github.io/
 ├── index.html          # About page (home)
-├── publications.html
-├── talks.html
-├── posters.html
 ├── news.html
-├── nav.html            # Shared navigation bar
+├── posters.html
+├── publications.html
 ├── sidebar.html        # Shared sidebar (photo, name, links)
 ├── style.css           # All styles
-├── photo.jpg           # Profile photo
-├── cv.pdf
+├── talks.html
 └── img/
     ├── poster1.pdf
     └── poster1-thumb.jpg
@@ -23,7 +20,6 @@ lw112.github.io/
 
 ## Editing content
 
-- **Navigation links** — edit `nav.html`
 - **Sidebar** (photo, name, affiliations, social links) — edit `sidebar.html`
 - **About text** — edit `index.html`
 - **Publications / Talks / Posters / News** — edit the respective HTML file
@@ -33,7 +29,7 @@ The index page automatically pulls the 4 most recent news items from `news.html`
 
 ## Local development
 
-Because the nav and sidebar are loaded via `fetch()`, you need a local server to preview — just opening the HTML file directly won't work.
+Because the sidebar is loaded via `fetch()`, you need a local server to preview — just opening the HTML file directly won't work.
 
 ```bash
 python3 -m http.server 8000
