@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laura Weihl — IT University of Copenhagen</title>
+  <title>Laura Weihl - Computer Vision Researcher</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -12,7 +12,6 @@
 
   <nav>
     <a class="brand" href="index.html">Laura Weihl</a>
-    <a href="index.html" class="active">About</a>
     <a href="publications.html">Publications</a>
     <a href="talks.html">Talks</a>
     <a href="posters.html">Posters</a>
@@ -50,26 +49,7 @@
 
       <section style="margin-top: 3rem;">
         <h2 class="section-title">Recent news</h2>
-        <ul class="news-list news-preview">
-        <li class="news-item">
-            <span class="news-date">May 2026</span>
-            <span class="news-text">I <a class="text-link" href="https://en.itu.dk/about-itu/calendar/events/2026/PhD%20Defence%20by%20Laura%20Weihl">defended my PhD</a> at ITU Copenhagen 🥳.</span>
-        </li>
-
-        <li class="news-item">
-          <span class="news-date">April 2026</span>
-          <span class="news-text">I will be on a panel discussion on "Marine Autonomy: overhyped or overlooked from different perspectives" at <a class="text-link" href="https://www.auv2026-southampton.com/">AUV2026</a>.</span>
-        </li>
-
-          <li class="news-item">
-            <span class="news-date">March 2026</span>
-            <span class="news-text">Paper accepted at <a class="text-link" href="https://www.auv2026-southampton.com/">AUV2026</a> — "3D Gaussian Splatting as Test Video Generators for Loop Closure in Underwater vSLAM".</span>
-          </li>
-          <li class="news-item">
-            <span class="news-date">Feb 2026</span>
-            <span class="news-text">I will give a talk on underwater visual anomaly detection at the <a class="text-link" href="https://miw2026.org/">Marine Imaging Workshop</a> in Gibraltar.</span>
-          </li>
-        </ul>
+        <ul class="news-list news-preview" id="news-preview"></ul>
         <a class="see-all" href="news.html">All news →</a>
       </section>
 
@@ -84,6 +64,28 @@
         .then(r => r.text())
         .then(html => el.innerHTML = html);
     });
+    document.querySelectorAll('[data-include]').forEach(el => {
+      fetch(el.dataset.include)
+        .then(r => r.text())
+        .then(html => {
+          el.innerHTML = html;
+          if (el.tagName === 'NAV') {
+            const page = location.pathname.split('/').pop() || 'index.html';
+            el.querySelectorAll('a[href]').forEach(a => {
+              if (a.getAttribute('href') === page) a.classList.add('active');
+            });
+          }
+        });
+    });
+
+    // Pull top 4 news items from news.html
+    fetch('news.html')
+      .then(r => r.text())
+      .then(html => {
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const items = [...doc.querySelectorAll('.news-item')].slice(0, 4);
+        document.getElementById('news-preview').innerHTML = items.map(i => i.outerHTML).join('');
+      });
   </script>
 
 </body>
