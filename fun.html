@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>✨ Laura Weihl - Fun corner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+  <style>
+    .fun-intro {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      font-style: italic;
+    }
+
+    /* ── Reels grid ── */
+    .reels-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .reel-card {
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: border-color 0.15s, transform 0.15s;
+      display: block;
+    }
+
+    .reel-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .reel-thumb {
+      width: 100%;
+      aspect-ratio: 9/16;
+      object-fit: cover;
+      display: block;
+      background: var(--accent-light);
+    }
+
+    .reel-thumb-placeholder {
+      width: 100%;
+      aspect-ratio: 9/16;
+      background: linear-gradient(160deg, #e8f3fa, #d0e6f2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+    }
+
+    .reel-caption {
+      padding: 0.6rem 0.75rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .spotify-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+
+    .spotify-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .spotify-card iframe {
+      display: block;
+      width: 100%;
+    }
+
+    .spotify-caption {
+      padding: 0.6rem 0.75rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    @media (max-width: 760px) {
+      .concert-item {
+        grid-template-columns: 70px 1fr;
+      }
+
+      .reels-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <nav>
+      <a class="brand" href="index.html">Laura Weihl</a>
+      <a href="publications.html">Publications</a>
+      <a href="talks.html">Talks</a>
+      <a href="posters.html">Posters</a>
+      <a href="news.html">News</a>
+    </nav>
+
+  <div class="page">
+    <aside class="sidebar" data-include="sidebar.html"></aside>
+
+    <main class="main">
+      <h1>Fun corner 🎉</h1>
+      <p class="fun-intro">You found the secret page! This is the non-academic side of things.</p>
+
+      <section>
+        <h2 class="section-title">Insta reels I relate to 😅</h2>
+        <div class="reels-grid">
+
+          <a class="reel-card" href="https://www.instagram.com/p/C2xbP3qiBeL/" target="_blank" rel="noopener">
+              <img class="reel-thumb-placeholder" src="img/insta1.png" alt="Insta Reel 1">
+            <p class="reel-caption">My PhD project vision</p>
+          </a>
+
+          <a class="reel-card" href="https://www.instagram.com/p/DUInJV4jE6d/" target="_blank" rel="noopener">
+              <img class="reel-thumb-placeholder" src="img/insta2.png" alt="Insta Reel 2">
+            <p class="reel-caption">When they ask me when I will finish my thesis</p>
+          </a>
+
+          <a class="reel-card" href="https://www.instagram.com/p/DV0Y_1ak-gD/" target="_blank" rel="noopener">
+              <img class="reel-thumb-placeholder" src="img/insta3.png" alt="Insta Reel 3">
+            <p class="reel-caption">When someone asks if you recommend doing a PhD</p>
+          </a>
+
+          <a class="reel-card" href="https://www.instagram.com/p/DL5x9JsMPec/" target="_blank" rel="noopener">
+              <img class="reel-thumb-placeholder" src="img/insta4.png" alt="Insta Reel 4">
+            <p class="reel-caption">Me describing my PhD journey</p>
+          </a>
+
+        </div>
+      </section>
+
+      <section style="margin-top: 3.5rem;">
+        <h2 class="section-title">Songs that got me through tough times 🎵</h2>
+            <iframe data-testid="embed-iframe" style="border-radius:0px" src="https://open.spotify.com/embed/track/6WfL1pwMyFf3IvFWLnre4P?utm_source=generator" width="40%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe data-testid="embed-iframe" style="border-radius:0px" src="https://open.spotify.com/embed/track/4qw40VAmTc9SIwmpMwG32u?utm_source=generator" width="40%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe data-testid="embed-iframe" style="border-radius:0px" src="https://open.spotify.com/embed/track/1otG6j1WHNvl9WgXLWkHTo?utm_source=generator" width="40%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe data-testid="embed-iframe" style="border-radius:0px" src="https://open.spotify.com/embed/track/3yWzAjSDqXPeMSWVTW3F4V?utm_source=generator" width="40%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </section>
+
+
+
+    </main>
+  </div>
+
+  <footer>© 2026 Laura Weihl · IT University of Copenhagen · Last updated May 2026 · Made with <a href="fun.html" style="text-decoration: none;">💙</a>
+
+  <script>
+  document.querySelectorAll('[data-include]').forEach(el => {
+    fetch(el.dataset.include)
+      .then(r => r.text())
+      .then(html => el.innerHTML = html);
+  });
+
+    document.querySelectorAll('[data-include]').forEach(el => {
+      fetch(el.dataset.include)
+        .then(r => r.text())
+        .then(html => {
+          el.innerHTML = html;
+          if (el.tagName === 'NAV') {
+            const page = location.pathname.split('/').pop() || 'index.html';
+            el.querySelectorAll('a[href]').forEach(a => {
+              if (a.getAttribute('href') === page) a.classList.add('active');
+            });
+          }
+        });
+    });
+  </script>
+
+</body>
+</html>

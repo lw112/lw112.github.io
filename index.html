@@ -57,7 +57,7 @@
     </main>
   </div>
 
-  <footer>© 2026 Laura Weihl · IT University of Copenhagen · Last updated May 2026</footer>
+  <footer>© 2026 Laura Weihl · IT University of Copenhagen · Last updated May 2026 · Made with <a href="fun.html" style="text-decoration: none;">💙</a>
 
   <script>
     document.querySelectorAll('[data-include]').forEach(el => {
@@ -65,19 +65,7 @@
         .then(r => r.text())
         .then(html => el.innerHTML = html);
     });
-    document.querySelectorAll('[data-include]').forEach(el => {
-      fetch(el.dataset.include)
-        .then(r => r.text())
-        .then(html => {
-          el.innerHTML = html;
-          if (el.tagName === 'NAV') {
-            const page = location.pathname.split('/').pop() || 'index.html';
-            el.querySelectorAll('a[href]').forEach(a => {
-              if (a.getAttribute('href') === page) a.classList.add('active');
-            });
-          }
-        });
-    });
+
 
     // Pull top 4 news items from news.html
     fetch('news.html')
