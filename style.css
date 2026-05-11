@@ -328,7 +328,7 @@ a.text-link:hover { text-decoration: underline; }
 
 .talk-links a:hover { background: #cce4f4; }
 
-.talk-links .coming-soon {
+.coming-soon {
   position: relative;
   font-size: 0.8rem;
   color: #aaa;
@@ -338,7 +338,7 @@ a.text-link:hover { text-decoration: underline; }
   cursor: default;
 }
 
-.talk-links .coming-soon::after {
+.coming-soon::after {
   content: "Coming soon";
   position: absolute;
   bottom: calc(100% + 6px);
@@ -355,7 +355,7 @@ a.text-link:hover { text-decoration: underline; }
   transition: opacity 0.15s;
 }
 
-.talk-links .coming-soon:hover::after {
+.coming-soon:hover::after {
   opacity: 1;
 }
 
