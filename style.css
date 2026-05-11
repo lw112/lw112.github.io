@@ -31,9 +31,9 @@ nav {
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
-  padding: 0 3rem;
+  padding: 0 1rem;
   height: 52px;
-  gap: 2rem;
+  gap: 0.75rem;
   justify-content: center;
 }
 
@@ -43,9 +43,9 @@ nav .brand {
   font-size: 1rem;
   color: var(--text);
   text-decoration: none;
-  /* ──margin-right: auto;  ── */
   position: absolute;
-  left:2em;
+  left: max(3rem, calc((100% - 1200px) / 2 + 3rem));
+
 }
 
 nav a {
@@ -518,6 +518,5 @@ footer {
       grid-row: 1 / 4;
     }
 
-  nav { padding: 0 1.5rem; gap: 1.2rem; }
   footer { padding: 2rem 1.5rem; }
 }
