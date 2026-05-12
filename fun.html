@@ -170,6 +170,10 @@
       .then(html => el.innerHTML = html);
   });
 
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.querySelector('nav .links').classList.toggle('open');
+  });
+
     document.querySelectorAll('[data-include]').forEach(el => {
       fetch(el.dataset.include)
         .then(r => r.text())

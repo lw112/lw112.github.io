@@ -161,6 +161,10 @@
         .then(r => r.text())
         .then(html => el.innerHTML = html);
     });
+
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.querySelector('nav .links').classList.toggle('open');
+    });
   </script>
 
 </body>

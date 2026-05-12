@@ -104,6 +104,9 @@
         .then(html => el.innerHTML = html);
     });
   </script>
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.querySelector('nav .links').classList.toggle('open');
+  });
 
 </body>
 </html>
