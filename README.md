@@ -13,7 +13,7 @@ lw112.github.io/
 ├── sidebar.html        # Shared sidebar (photo, name, links)
 ├── style.css           # All styles
 ├── talks.html
-└── img/
+└── assets/
     ├── poster1.pdf
     └── poster1-thumb.jpg
 ```
